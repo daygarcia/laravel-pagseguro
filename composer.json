@@ -1,0 +1,17 @@
+{
+    "name": "admin/laravel-pagseguro",
+    "description": "Um pacote laravel para utilizar as fun\u0000\u0000es de pagamento do PagSeguro",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Admin\\LaravelPagseguro\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dayanne Garcia",
+            "email": "48609156+DayGarcia@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
