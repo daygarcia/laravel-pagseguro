@@ -1,5 +1,5 @@
 {
-    "name": "admin/laravel-pagseguro",
+    "name": "daygarcia/laravel-pagseguro",
     "description": "Um pacote laravel para utilizar as fun\u0000\u0000es de pagamento do PagSeguro",
     "license": "MIT",
     "autoload": {
