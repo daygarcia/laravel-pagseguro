@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelPagSeguro\Api\Checkout;
+namespace LaravelPagSeguro\Api\Charge;
 
 use LaravelPagSeguro\Api;
 use LaravelPagSeguro\Configuration;
