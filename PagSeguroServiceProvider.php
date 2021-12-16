@@ -1,9 +1,9 @@
 <?php
 
-namespace PagSeguro;
+namespace LaravelPagSeguro;
 
 use Illuminate\Support\ServiceProvider;
-use PagSeguro\PagSeguro;
+use LaravelPagSeguro\PagSeguro;
 
 class PagSeguroServiceProvider extends ServiceProvider
 {

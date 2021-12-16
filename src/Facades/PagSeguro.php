@@ -1,6 +1,6 @@
 <?php
 
-namespace PagSeguro\Facades;
+namespace LaravelPagSeguro\Facades;
 
 use \Illuminate\Support\Facades\Facade;
 

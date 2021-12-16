@@ -6,7 +6,7 @@
  * @author Day Garcia
  */
 
-namespace PagSeguro;
+namespace LaravelPagSeguro;
 
 use PagSeguro\Contracts;
 
