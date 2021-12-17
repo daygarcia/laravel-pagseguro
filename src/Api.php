@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Http;
 class Api
 {
     private $url;
+    private const api_version = '4.0';
     public function __construct(Configuration $configuration)
     {
         $this->configuration = $configuration;
@@ -16,22 +17,22 @@ class Api
 
     public function get(String $access_token, String $path, array $query = null)
     {
-        return Http::withToken($access_token)->get($this->url . $path, $query)->object();
+        return Http::withHeaders(['x-api-version', self::api_version])->withToken($access_token)->get($this->url . $path, $query)->object();
     }
 
     public function post(string $access_token, string $path, $data)
     {
-        return Http::withToken($access_token)->post($this->url . $path, $data)->object();
+        return Http::withHeaders(['x-api-version', self::api_version])->withToken($access_token)->post($this->url . $path, $data)->object();
     }
 
     public function put(string $access_token, string $path, $data)
     {
-        return Http::withToken($access_token)->put($this->url . $path, $data)->object();
+        return Http::withHeaders(['x-api-version', self::api_version])->withToken($access_token)->put($this->url . $path, $data)->object();
     }
 
     public function delete(string $access_token, $path)
     {
-        return Http::withToken($access_token)->delete($this->url . $path)->object();
+        return Http::withHeaders(['x-api-version', self::api_version])->withToken($access_token)->delete($this->url . $path)->object();
     }
 
     public function upload(string $access_token, string $path, UploadedFile $file)
