@@ -7,8 +7,6 @@ use Illuminate\Support\Facades\Http;
 
 class Configuration
 {
-    private const URL = 'https://api.mercadolibre.com/';
-
     private $code;
     private $client_id;
     private $secret;
@@ -21,6 +19,8 @@ class Configuration
 
     public function __construct(array $config)
     {
+        $this->url = config('pagseguro.sandbox') ? config('pagseguro.host.soap_sandbox') : config('pagseguro.host.soap_production');
+
         $this->code = $config['code'] ?? null;
         $this->client_id = $config['client_id'] ?? null;
         $this->secret = $config['secret'] ?? null;
@@ -60,7 +60,7 @@ class Configuration
                 'Authorization: application/json'
             ]
         )->post(
-            self::URL . '/oauth/token',
+            $this->url . '/oauth2/token',
             $authorization_type[$this->type]['body']
         )->object();
 
