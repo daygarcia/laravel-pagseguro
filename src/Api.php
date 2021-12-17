@@ -9,9 +9,8 @@ class Api
 {
     private $url;
     private const api_version = '4.0';
-    public function __construct(Configuration $configuration)
+    public function __construct()
     {
-        $this->configuration = $configuration;
         $this->url = config('pagseguro.sandbox') ? config('pagseguro.host.sandbox') : config('pagseguro.host.production');
     }
 
