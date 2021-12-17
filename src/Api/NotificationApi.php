@@ -3,7 +3,7 @@
 
 namespace LaravelPagSeguro\Api;
 
-use DayGarcia\LaravelMercadoLivre\Configuration;
+use LaravelPagSeguro\Configuration;
 use LaravelPagSeguro\SoapApi;
 
 class NotificationApi extends SoapApi
