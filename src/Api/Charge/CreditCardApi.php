@@ -14,7 +14,7 @@ class CreditCardApi extends Api
 
     public function create(array $data)
     {
-        $url = 'v2/checkout';
-        return $this->post($this->configuration->getAccessToken(), $url, $data);
+        $path = 'charges';
+        return $this->post($this->configuration->getAccessToken(), $path, $data);
     }
 }
