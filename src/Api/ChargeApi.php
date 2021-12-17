@@ -5,7 +5,7 @@ namespace LaravelPagSeguro\Api;
 use LaravelPagSeguro\Api;
 use LaravelPagSeguro\Configuration;
 
-class Charge extends Api
+class ChargeApi extends Api
 {
     public function __construct(Configuration $configuration)
     {
