@@ -11,6 +11,7 @@ class NotificationApi extends SoapApi
     public function __construct(Configuration $configuration)
     {
         $this->configuration = $configuration;
+        parent::__construct();
     }
 
     public function getNotification(string $notification_code)
