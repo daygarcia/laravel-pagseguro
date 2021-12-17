@@ -1,7 +1,8 @@
 <?php
 
 
-namespace PagSeguro\Webhooks;
+namespace LaravelPagSeguro\Webhooks;
+
 
 class Notification
 {
