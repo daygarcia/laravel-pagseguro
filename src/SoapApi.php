@@ -26,7 +26,9 @@ class SoapApi
 
     public function get(String $access_token, String $path, array $query = null)
     {
-        $response = Http::withHeaders(self::default_headers)->withToken($access_token)->get($this->url . $path, array_merge($this->default_query, $query));
+        $query = $query !== null ? array_merge($this->default_query, $query) : $this->default_query;
+
+        $response = Http::withHeaders(self::default_headers)->withToken($access_token)->get($this->url . $path, $query);
 
         return $this->convertXMLResponseIntoJson($response->getBody());
     }
